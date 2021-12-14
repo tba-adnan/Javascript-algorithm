@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="solicode"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-14 11:18:14 "/>
+        <attribute name="created" value="c29saWNvZGU7REVTS1RPUC01NkkyNjdCOzIwMjEtMTItMTQ7IjA5OjIyOjM4ICI7MzAzMA=="/>
+        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC01NkkyNjdCOzIwMjEtMTItMTQ7IjExOjE4OjE0ICI7MjszMTMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="listNumbers" type="Integer" array="True" size="10"/>
+            <assign variable="listNumbers[0]" expression="22"/>
+            <assign variable="listNumbers[1]" expression="44"/>
+            <assign variable="listNumbers[2]" expression="12"/>
+            <assign variable="listNumbers[3]" expression="95"/>
+            <assign variable="listNumbers[4]" expression="32"/>
+            <assign variable="listNumbers[5]" expression="56"/>
+            <assign variable="listNumbers[6]" expression="76"/>
+            <assign variable="listNumbers[7]" expression="62"/>
+            <assign variable="listNumbers[8]" expression="3"/>
+            <assign variable="listNumbers[9]" expression="29"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="tempValue" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <for variable="j" start="0" end="9 - i - 1" direction="inc" step="1">
+                    <if expression="listNumbers[j] &gt; listNumbers[j + 1]">
+                        <then>
+                            <assign variable="tempValue" expression="listNumbers[j]"/>
+                            <assign variable="listNumbers[j]" expression="listNumbers[j + 1]"/>
+                            <assign variable="listNumbers[j + 1]" expression="tempValue"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <assign variable="i" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="listNumbers[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

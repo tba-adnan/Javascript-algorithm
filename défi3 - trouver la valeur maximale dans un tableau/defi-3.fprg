@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="solicode"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-14 09:41:56 "/>
+        <attribute name="created" value="c29saWNvZGU7REVTS1RPUC01NkkyNjdCOzIwMjEtMTItMTQ7IjA5OjIyOjM4ICI7MzAzMA=="/>
+        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC01NkkyNjdCOzIwMjEtMTItMTQ7IjA5OjQxOjU2ICI7MTszMTM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="maxNumber" type="Integer" array="False" size=""/>
+            <declare name="listNumbers" type="Integer" array="True" size="10"/>
+            <assign variable="listNumbers[0]" expression="22"/>
+            <assign variable="listNumbers[1]" expression="44"/>
+            <assign variable="listNumbers[2]" expression="12"/>
+            <assign variable="listNumbers[3]" expression="95"/>
+            <assign variable="listNumbers[4]" expression="32"/>
+            <assign variable="listNumbers[5]" expression="56"/>
+            <assign variable="listNumbers[6]" expression="76"/>
+            <assign variable="listNumbers[7]" expression="62"/>
+            <assign variable="listNumbers[8]" expression="3"/>
+            <assign variable="listNumbers[9]" expression="29"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="maxNumber" expression="listNumbers[0]"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="maxNumber &lt;= listNumbers[i]">
+                    <then>
+                        <assign variable="maxNumber" expression="listNumbers[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Max number is: &quot; &amp; maxNumber" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

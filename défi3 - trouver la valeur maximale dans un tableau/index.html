@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defi 3</title>
+</head>
+
+<body>
+    <script>
+        var maxNumber;
+        var listNumbers = [];
+
+        listNumbers[0] = 22;
+        listNumbers[1] = 44;
+        listNumbers[2] = 12;
+        listNumbers[3] = 95;
+        listNumbers[4] = 32;
+        listNumbers[5] = 56;
+        listNumbers[6] = 76;
+        listNumbers[7] = 62;
+        listNumbers[8] = 3;
+        listNumbers[9] = 29;
+        var i;
+
+        maxNumber = listNumbers[0];
+        for (i = 0; i <= listNumbers.length; i++) {
+            if (maxNumber <= listNumbers[i]) {
+                maxNumber = listNumbers[i];
+            }
+        }
+        window.alert("Max number is: " + maxNumber);
+    </script>
+</body>
+
+</html>

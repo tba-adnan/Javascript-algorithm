@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var listNumbers = [];
+
+        listNumbers[0] = 22;
+        listNumbers[1] = 44;
+        listNumbers[2] = 12;
+        listNumbers[3] = 95;
+        listNumbers[4] = 32;
+        listNumbers[5] = 56;
+        listNumbers[6] = 76;
+        listNumbers[7] = 62;
+        listNumbers[8] = 3;
+        listNumbers[9] = 29;
+        var i;
+        var j;
+        var tempValue;
+
+        for (i = 0; i <= 9; i++) {
+            for (j = 0; j <= 9 - i - 1; j++) {
+                if (listNumbers[j] > listNumbers[j + 1]) {
+                    tempValue = listNumbers[j];
+                    listNumbers[j] = listNumbers[j + 1];
+                    listNumbers[j + 1] = tempValue;
+                }
+            }
+        }
+        i = 0;
+        for (i = 0; i <= 9; i++) {
+            window.alert(listNumbers[i]);
+        }
+    </script>
+</body>
+
+</html>
