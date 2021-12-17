@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi 5</title>
+</head>
+<body>
+    <script>
+        var isFound = false;
+        var listNumbers = [];
+
+        for(var i = 0; i < 100; i++){
+            listNumbers[i] = i
+        }
+
+        var userInput = parseInt(prompt("Enter number: "))
+
+        var min = 0;
+        var max = listNumbers.length
+
+        var mid;
+        while(isFound != true){
+            if(max < min){
+                break;
+            }
+
+             mid = min + Math.floor((max - min)/ 2)
+            if(listNumbers[mid] < userInput){
+                min = mid + 1
+            }
+
+            if(listNumbers[mid] > userInput){
+                max = mid -1
+            }
+
+            if(listNumbers[mid] == userInput){
+                isFound = true
+                break;
+            }
+        }
+
+        if(isFound){
+            alert('yes we found the number at: ' + mid)
+        } else {
+            alert("number doesn't exist!")
+        }
+    </script>
+</body>
+</html>
