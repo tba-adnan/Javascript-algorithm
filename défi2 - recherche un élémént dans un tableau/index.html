@@ -11,25 +11,28 @@
 <body>
     <script>
             var isFound;
+            var userInput;
+            var i;
+            var listNumbers = [];
 
             isFound = false;
-            // var listNumbers = createArray(5);
-            var listNumbers = [];
 
             listNumbers[0] = 1;
             listNumbers[1] = 10;
             listNumbers[2] = 4;
             listNumbers[3] = 987;
             listNumbers[4] = 9;
-            var userInput;
-            var i;
+           
 
-            userInput = window.prompt('Enter a value for userInput');
+            userInput = prompt('Enter a value for userInput');
+
             for (i = 0; i <= 4; i++) {
                 if (userInput == listNumbers[i]) {
                     isFound = true;
+                    break;
                 }
             }
+            
             if (isFound) {
                 window.alert("Yes the number exists");
             } else {
